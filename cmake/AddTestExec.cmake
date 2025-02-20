@@ -1,0 +1,5 @@
+function(AddTestExec target)
+    add_executable(${target} ${ARGN})
+    target_link_libraries(${target} PRIVATE ${PROJECT_NAME})
+    target_include_directories(${target} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/inc)
+endfunction()
